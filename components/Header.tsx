@@ -4,7 +4,7 @@ import logo from "../public/images/logo-header.png";
 
 function Header() {
   return (
-    <div className="navbar container mx-auto bg-white text-black">
+    <div className="navbar container mx-auto bg-white text-black border-b-2 border-dotted mb-5">
       <div className="flex-1">
         <Image src={logo} />
       </div>
@@ -27,17 +27,17 @@ function Header() {
               </svg>
             </a>
             <ul className="p-2 bg-white">
-              <li className=" border-">
-                <a>Résidentiel</a>
+              <li className="">
+                <a href="/services/residentiel">Résidentiel</a>
               </li>
               <li>
-                <a>Commercial</a>
+                <a href="/services/commercial">Commercial</a>
               </li>
               <li>
-                <a>Nettoyage à la vapeur</a>
+                <a href="/services/nettoyage-a-la-vapeur">Nettoyage à la vapeur</a>
               </li>
               <li>
-                <a>Véhicule à domicile</a>
+                <a href="/services/vehicule-a-domicile">Véhicule à domicile</a>
               </li>
             </ul>
           </li>

@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <>
       <div className="w-full min-h-screen bg-white font-bold">
         <Header />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 border-y-2 mb-5 border-dotted min-h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-full">
           <div className="h-[500px] group p-5 bg-cover bg-[url('../public/images/card-residentiel.jpg')]">
             <div className="bg-stone-900/80 hidden group-hover:flex h-full justify-center items-center text-center">
               <div className="flex flex-col gap-5 items-center">
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="h-[500px] group p-5 bg-cover bg-[url('../public/images/card-commecial.jpg')]">
+          <div className="h-[500px] group p-5 bg-cover bg-[url('../public/images/card-commercial.jpg')]">
             <div className="bg-stone-900/80 hidden group-hover:flex h-full justify-center items-center text-center">
               <div className="flex flex-col gap-5 items-center">
                 <p>Entretien MK Pro</p>

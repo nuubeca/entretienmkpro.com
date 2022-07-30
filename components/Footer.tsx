@@ -12,7 +12,7 @@ function Footer() {
   return (
     <>
     <div className="bg-stone-900">
-      <footer className="footer py-10 text-base-content flex-none md:flex md:justify-between container mx-auto">
+      <footer className="footer py-10 text-base-content flex-none md:flex md:justify-between container mx-auto border-t-2 border-dotted mt-5">
         <div>
           <Image src={logo} />
           <div className="flex items-center gap-2">
@@ -33,10 +33,10 @@ function Footer() {
         </div>
         <div>
           <span className="footer-title">Services</span>
-          <a className="link link-hover">Résidentiel</a>
-          <a className="link link-hover">Commercial</a>
-          <a className="link link-hover">Nettoyage à la vapeur</a>
-          <a className="link link-hover">Véhicule à domicile</a>
+          <a href="/services/residentiel" className="link link-hover">Résidentiel</a>
+          <a href="/services/commercial" className="link link-hover">Commercial</a>
+          <a href="/services/nettoyage-a-la-vapeur" className="link link-hover">Nettoyage à la vapeur</a>
+          <a href="/services/vehicule-a-domicile" className="link link-hover">Véhicule à domicile</a>
         </div>
         <div>
           <span className="footer-title">Social</span>
