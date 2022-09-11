@@ -17,7 +17,11 @@ function Footer() {
           <Image src={logo} />
           <div className="flex items-center gap-2">
             <FaPhoneSquare size={30} />
-            <a href="tel:514-647-7056">(514)-647-7056</a>
+            <a href="tel:5146477056">(514)-647-7056</a>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaPhoneSquare size={30} />
+            <a href="tel:8196408230">(819)-640-8230</a>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelopeSquare size={30} />
