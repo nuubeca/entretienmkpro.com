@@ -9,15 +9,17 @@ import commercial from "../../public/images/card-commercial.jpg";
 const Commercial: NextPage = () => {
   return (
     <>
-      <div className="w-full min-h-screen bg-white font-bold">
+      <div className="w-full min-h-screen bg-white font-bold text-stone-800">
         <Header />
-        <section className="bg-white text-stone-800">
-          <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div className="mr-auto place-self-center lg:col-span-7">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row-reverse">
+            <Image
+              src={commercial}
+              className="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div>
               <div className="flex justify-between items-center">
-                <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-                  Commercial
-                </h1>
+                <h1 className="text-5xl font-bold">Commercial</h1>
                 <div className="flex">
                   <FaStar />
                   <FaStar />
@@ -26,13 +28,13 @@ const Commercial: NextPage = () => {
                   <FaStar />
                 </div>
               </div>
-
-              <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
+              <p className="py-6 text-stone-800/70">
                 L’équipe d’entretien MK Pro propose un service d’entretien
                 ménager de qualité supérieure pour les entreprises situées à
                 Sherbrooke et ses environs. Ce service est défini en fonction
                 des besoins spécifiques du client.
               </p>
+              <p className="pb-2 underline">Différentes industries :</p>
               <div className="flex items-center gap-2">
                 <FaQuoteLeft />
                 <p>Écoles & garderies</p>
@@ -61,19 +63,15 @@ const Commercial: NextPage = () => {
                 <FaQuoteLeft />
                 <p>Industriel/Usine</p>
               </div>
-
               <a
                 href="#"
-                className="my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+                className="my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
               >
                 Obtenez votre soumission gratuite
               </a>
             </div>
-            <div className="mt-0 col-span-5 flex">
-              <Image src={commercial} className="" />
-            </div>
           </div>
-        </section>
+        </div>
         <Footer />
       </div>
     </>
