@@ -11,8 +11,8 @@ import logo from "../public/images/logo-footer.png";
 function Footer() {
   return (
     <>
-      <div className="bg-stone-900">
-        <footer className="footer py-10 px-5 text-base-content flex-none md:flex md:justify-between container mx-auto border-t-2 border-dotted mt-5">
+      <div className="bg-stone-900 text-white">
+        <footer className="footer py-10 px-5 text-white flex-none md:flex md:justify-between container mx-auto border-t-2 border-dotted -mt-5">
           <div>
             <Image src={logo} />
             <div className="flex items-center gap-2">
@@ -32,8 +32,12 @@ function Footer() {
           </div>
           <div>
             <span className="footer-title">Liens</span>
-            <a className="link link-hover">À propos</a>
-            <a className="link link-hover">Contactez-nous</a>
+            <a href="/a-propos" className="link link-hover">
+              À propos
+            </a>
+            <a href="/contactez-nous" className="link link-hover">
+              Contactez-nous
+            </a>
           </div>
           <div>
             <span className="footer-title">Services</span>
@@ -66,7 +70,7 @@ function Footer() {
           </div>
         </footer>
       </div>
-      <div className="text-center bg-stone-800 py-4">
+      <div className="text-center bg-stone-800 py-4 text-stone-400">
         Entretien MK Pro © 2022
       </div>
     </>

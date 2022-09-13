@@ -7,7 +7,7 @@ function Header() {
     <div className="navbar container mx-auto bg-white text-black border-b-2 border-dotted mb-5">
       <div className="navbar-start md:hidden">
         <div className="dropdown">
-          <label tabindex="0" className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -26,10 +26,12 @@ function Header() {
 
           <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52">
             <li>
-              <a>Accueil</a>
+              <a href="/" className="active:bg-stone-200">
+                Accueil
+              </a>
             </li>
             <li tabIndex={0}>
-              <a>
+              <p className="active:bg-stone-200">
                 Services
                 <svg
                   className="fill-current"
@@ -40,31 +42,49 @@ function Header() {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
+              </p>
               <ul className="p-2 bg-white">
                 <li className="">
-                  <a href="/services/residentiel">Résidentiel</a>
+                  <a
+                    href="/services/residentiel"
+                    className="active:bg-stone-200"
+                  >
+                    Résidentiel
+                  </a>
                 </li>
                 <li>
-                  <a href="/services/commercial">Commercial</a>
+                  <a
+                    href="/services/commercial"
+                    className="active:bg-stone-200"
+                  >
+                    Commercial
+                  </a>
                 </li>
                 <li>
-                  <a href="/services/nettoyage-a-la-vapeur">
+                  <a
+                    href="/services/nettoyage-a-la-vapeur"
+                    className="active:bg-stone-200"
+                  >
                     Nettoyage à la vapeur
                   </a>
                 </li>
                 <li>
-                  <a href="/services/vehicule-a-domicile">
+                  <a
+                    href="/services/vehicule-a-domicile"
+                    className="active:bg-stone-200"
+                  >
                     Véhicule à domicile
                   </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a>À Propos</a>
+              <a href="/a-propos" className="active:bg-stone-200">
+                À Propos
+              </a>
             </li>
             <li>
-              <a>Contactez-Nous</a>
+              <a className="active:bg-stone-200">Contactez-Nous</a>
             </li>
           </ul>
         </div>
@@ -76,10 +96,12 @@ function Header() {
       <div className="flex-none z-50 hidden md:block">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Accueil</a>
+            <a href="/" className="active:bg-stone-200">
+              Accueil
+            </a>
           </li>
           <li tabIndex={0}>
-            <a>
+            <a className="active:bg-stone-200">
               Services
               <svg
                 className="fill-current"
@@ -92,27 +114,39 @@ function Header() {
               </svg>
             </a>
             <ul className="p-2 bg-white">
-              <li className="">
-                <a href="/services/residentiel">Résidentiel</a>
+              <li>
+                <a href="/services/residentiel" className="active:bg-stone-200">
+                  Résidentiel
+                </a>
               </li>
               <li>
-                <a href="/services/commercial">Commercial</a>
+                <a href="/services/commercial" className="active:bg-stone-200">
+                  Commercial
+                </a>
               </li>
               <li>
-                <a href="/services/nettoyage-a-la-vapeur">
+                <a
+                  href="/services/nettoyage-a-la-vapeur"
+                  className="active:bg-stone-200"
+                >
                   Nettoyage à la vapeur
                 </a>
               </li>
               <li>
-                <a href="/services/vehicule-a-domicile">Véhicule à domicile</a>
+                <a
+                  href="/services/vehicule-a-domicile"
+                  className="active:bg-stone-200"
+                >
+                  Véhicule à domicile
+                </a>
               </li>
             </ul>
           </li>
           <li>
-            <a>À Propos</a>
+            <a className="active:bg-stone-200">À Propos</a>
           </li>
           <li>
-            <a>Contactez-Nous</a>
+            <a className="active:bg-stone-200">Contactez-Nous</a>
           </li>
         </ul>
       </div>
