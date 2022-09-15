@@ -19,7 +19,9 @@ const Apropos: NextPage = () => {
               </div>
               <div>
                 <div className="flex justify-between items-center">
-                  <h1 className="text-5xl font-bold">À propos de nous</h1>
+                  <h1 className="text-3xl sm:text-5xl font-bold">
+                    À propos de nous
+                  </h1>
                   <div className="flex">
                     <FaStar />
                     <FaStar />
@@ -43,28 +45,28 @@ const Apropos: NextPage = () => {
                     avant-goût de ce qu'entretien Mk Pro pourra vous offrir.
                   </p>
                 </div>
-                <div className="pb-5 grid grid-cols-2">
+                <div className="pb-5 grid grid-cols-1s sm:grid-cols-2">
                   <a
                     href="/services/residentiel"
-                    className="w-52 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
+                    className="w-full sm:w-72 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                   >
                     Résidentiel
                   </a>
                   <a
                     href="/services/commercial"
-                    className="w-52 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
+                    className="w-full sm:w-72 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                   >
                     Commercial
                   </a>
                   <a
                     href="/services/nettoyage-a-la-vapeur"
-                    className="w-52 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
+                    className="w-full sm:w-72 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                   >
                     Nettoyage à la vapeur
                   </a>
                   <a
                     href="services/vehicule-a-domicile"
-                    className="w-52 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
+                    className="w-full sm:w-72 my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                   >
                     Véhicule à domicile
                   </a>

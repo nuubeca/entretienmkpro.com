@@ -60,10 +60,10 @@ function Footer() {
           <div>
             <span className="footer-title">Social</span>
             <div className="grid grid-flow-col gap-4">
-              <a>
+              <a href="https://www.facebook.com/EntretienMKpro/">
                 <FaFacebookF size={30} />
               </a>
-              <a>
+              <a href="https://www.tiktok.com/@entretienmkpro?fbclid=IwAR1NKces9UOS19-M-PxGH-wSzq2fvT-4MCiRhypDjNMiO8vPXGa4kG0I3p8">
                 <FaTiktok size={30} />
               </a>
             </div>

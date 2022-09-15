@@ -2,7 +2,7 @@
 const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const body = JSON.parse(req.body);
 
   const message = `
@@ -15,8 +15,8 @@ export default function handler(req, res) {
   console.log(message);
   try {
     mail.send({
-      to: "max@pelletier.me",
-      from: "info@entretienmkpro.com",
+      to: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_TO,
+      from: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_FROM,
       subject: "Demande de soumission!",
       text: message,
       html: message.replace(/rn/g, "<br>"),

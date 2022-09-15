@@ -3,15 +3,16 @@ import { useState } from "react";
 export default function ContactForm() {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(false);
+  const [service, setService] = useState("Service");
 
   if (succeeded) {
     return (
       <>
-        <div class="alert alert-success shadow-lg">
+        <div className="alert alert-success shadow-lg">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="stroke-current flex-shrink-0 h-6 w-6"
+              className="stroke-current flex-shrink-0 h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
             >
@@ -22,7 +23,7 @@ export default function ContactForm() {
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span>Votre message a été transmis!</span>
+            <span>Merci, votre message a bien été envoyé à notre équipe.</span>
           </div>
         </div>
       </>
@@ -79,18 +80,19 @@ export default function ContactForm() {
         required
       />
       <select
+        value={service}
+        onChange={(e) => {
+          setService(e.target.value);
+        }}
         className="select select-bordered"
         id="service"
         name="service"
         required
       >
-        <option disabled selected>
-          Service
-        </option>
-        <option>Résidentiel</option>
-        <option>Commercial</option>
-        <option>Nettoyage à la vapeur</option>
-        <option>Véhicule à domicile</option>
+        <option value="Residentiel">Résidentiel</option>
+        <option value="Commercial">Commercial</option>
+        <option value="NettoyageVapeur">Nettoyage à la vapeur</option>
+        <option value="VehiculeDomicile">Véhicule à domicile</option>
       </select>
 
       <textarea
@@ -100,7 +102,10 @@ export default function ContactForm() {
         name="message"
         required
       />
-      <button className="btn " type="submit">
+      <button
+        className="my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg bg-stone-800 text-white focus:ring-4 focus:ring-gray-100"
+        type="submit"
+      >
         Envoyer
       </button>
       {error && (

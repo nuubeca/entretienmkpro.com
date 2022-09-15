@@ -16,9 +16,9 @@ function Header() {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
@@ -84,7 +84,9 @@ function Header() {
               </a>
             </li>
             <li>
-              <a className="active:bg-stone-200">Contactez-Nous</a>
+              <a href="/contactez-nous" className="active:bg-stone-200">
+                Contactez-Nous
+              </a>
             </li>
           </ul>
         </div>
@@ -143,10 +145,14 @@ function Header() {
             </ul>
           </li>
           <li>
-            <a className="active:bg-stone-200">À Propos</a>
+            <a href="/a-propos" className="active:bg-stone-200">
+              À Propos
+            </a>
           </li>
           <li>
-            <a className="active:bg-stone-200">Contactez-Nous</a>
+            <a href="/contactez-nous" className="active:bg-stone-200">
+              Contactez-Nous
+            </a>
           </li>
         </ul>
       </div>
