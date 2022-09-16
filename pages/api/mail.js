@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 `;
   console.log(message);
   try {
-    mail.send({
+    await mail.send({
       to: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_TO,
       from: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_FROM,
       subject: "Demande de soumission!",
