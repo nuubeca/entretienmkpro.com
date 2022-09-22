@@ -17,6 +17,7 @@ export default async function handler(req, res) {
     await mail.send({
       to: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_TO,
       from: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_FROM,
+      cc: "info@nuube.ca",
       subject: "Demande de soumission!",
       text: message,
       html: message.replace(/rn/g, "<br>"),

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { PatternFormat } from "react-number-format";
 
 export default function ContactForm() {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(false);
   const [service, setService] = useState("Service");
+  const [phone, setPhone] = useState("");
 
   if (succeeded) {
     return (
@@ -70,7 +72,18 @@ export default function ContactForm() {
         name="email"
         required
       />
-      <input
+      <PatternFormat
+        className="input input-bordered"
+        type="tel"
+        format="(###) ###-####"
+        mask=" "
+        name="phone"
+        id="phone"
+        placeholder="Tél : 000-000-0000"
+        onValueChange={(value) => setPhone(value.formattedValue)}
+        required
+      />
+      {/* <input
         className="input input-bordered"
         placeholder="Tél : 000-000-0000"
         id="phone"
@@ -78,7 +91,7 @@ export default function ContactForm() {
         name="phone"
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         required
-      />
+      /> */}
       <select
         value={service}
         onChange={(e) => {
