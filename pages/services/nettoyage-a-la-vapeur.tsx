@@ -67,7 +67,7 @@ const Vapeur: NextPage = () => {
                 </div>
                 <div className="pb-5">
                   <a
-                    href="#"
+                    href="/contactez-nous"
                     className="my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                   >
                     Obtenez votre soumission gratuite
