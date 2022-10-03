@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 import React from "react";
 import logo from "../public/images/logo-header.png";
 
@@ -26,9 +27,9 @@ function Header() {
 
           <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52">
             <li>
-              <a href="/" className="active:bg-stone-200">
+              <Link href="/" className="active:bg-stone-200">
                 Accueil
-              </a>
+              </Link>
             </li>
             <li tabIndex={0}>
               <p className="active:bg-stone-200">
@@ -45,48 +46,48 @@ function Header() {
               </p>
               <ul className="p-2 bg-white">
                 <li className="">
-                  <a
+                  <Link
                     href="/services/residentiel"
                     className="active:bg-stone-200"
                   >
                     Résidentiel
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/services/commercial"
                     className="active:bg-stone-200"
                   >
                     Commercial
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/services/nettoyage-a-la-vapeur"
                     className="active:bg-stone-200"
                   >
                     Nettoyage à la vapeur
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/services/vehicule-a-domicile"
                     className="active:bg-stone-200"
                   >
                     Véhicule à domicile
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/a-propos" className="active:bg-stone-200">
+              <Link href="/a-propos" className="active:bg-stone-200">
                 À Propos
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contactez-nous" className="active:bg-stone-200">
+              <Link href="/contactez-nous" className="active:bg-stone-200">
                 Contactez-Nous
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -98,9 +99,9 @@ function Header() {
       <div className="flex-none z-50 hidden md:block">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a href="/" className="active:bg-stone-200">
+            <Link href="/" className="active:bg-stone-200">
               Accueil
-            </a>
+            </Link>
           </li>
           <li tabIndex={0}>
             <a className="active:bg-stone-200">
@@ -117,42 +118,42 @@ function Header() {
             </a>
             <ul className="p-2 bg-white">
               <li>
-                <a href="/services/residentiel" className="active:bg-stone-200">
+                <Link href="/services/residentiel" className="active:bg-stone-200">
                   Résidentiel
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services/commercial" className="active:bg-stone-200">
+                <Link href="/services/commercial" className="active:bg-stone-200">
                   Commercial
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/services/nettoyage-a-la-vapeur"
                   className="active:bg-stone-200"
                 >
                   Nettoyage à la vapeur
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/services/vehicule-a-domicile"
                   className="active:bg-stone-200"
                 >
                   Véhicule à domicile
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="/a-propos" className="active:bg-stone-200">
+            <Link href="/a-propos" className="active:bg-stone-200">
               À Propos
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contactez-nous" className="active:bg-stone-200">
+            <Link href="/contactez-nous" className="active:bg-stone-200">
               Contactez-Nous
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
