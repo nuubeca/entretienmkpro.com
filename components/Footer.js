@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import {
   FaEnvelopeSquare,
@@ -14,7 +15,7 @@ export default function Footer() {
       <div className="bg-stone-900 text-white">
         <footer className="footer py-10 px-5 text-white flex-none md:flex md:justify-between container mx-auto border-t-2 border-dotted -mt-5">
           <div>
-            <Image src={logo} />
+            <Image src={logo} alt="logo" />
             <div className="flex items-center gap-2">
               <FaPhoneSquare size={30} />
               <a href="tel:5146477056">(514)-647-7056</a>
@@ -32,30 +33,33 @@ export default function Footer() {
           </div>
           <div>
             <span className="footer-title">Liens</span>
-            <a href="/a-propos" className="link link-hover">
+            <Link href="/a-propos" className="link link-hover">
               À propos
-            </a>
-            <a href="/contactez-nous" className="link link-hover">
+            </Link>
+            <Link href="/contactez-nous" className="link link-hover">
               Contactez-nous
-            </a>
+            </Link>
           </div>
           <div>
             <span className="footer-title">Services</span>
-            <a href="/services/residentiel" className="link link-hover">
+            <Link href="/services/residentiel" className="link link-hover">
               Résidentiel
-            </a>
-            <a href="/services/commercial" className="link link-hover">
+            </Link>
+            <Link href="/services/commercial" className="link link-hover">
               Commercial
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services/nettoyage-a-la-vapeur"
               className="link link-hover"
             >
               Nettoyage à la vapeur
-            </a>
-            <a href="/services/vehicule-a-domicile" className="link link-hover">
+            </Link>
+            <Link
+              href="/services/vehicule-a-domicile"
+              className="link link-hover"
+            >
               Véhicule à domicile
-            </a>
+            </Link>
           </div>
           <div>
             <span className="footer-title">Social</span>
