@@ -1,14 +1,9 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Link from "next/link";
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <>
+    <div>
       <div className="w-full min-h-screen bg-white text-white font-bold flex flex-col">
-        <Header />
         <div className="flex-grow pb-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-full px-6">
             <div className="h-[500px] group p-5 bg-cover bg-[url('../public/images/card-residentiel.jpg')]">
@@ -16,11 +11,14 @@ const Home: NextPage = () => {
                 <div className="flex flex-col gap-5 items-center">
                   <p>Entretien MK Pro</p>
                   <p>
-                    Propose un service d'entretien ménager complet à domicile.
+                    Propose un service d’entretien ménager complet à domicile.
                   </p>
-                  <a className="p-2 w-32 border-2" href="/services/residentiel">
+                  <Link
+                    className="p-2 w-32 border-2"
+                    href="/services/residentiel"
+                  >
                     Savoir plus
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -29,12 +27,15 @@ const Home: NextPage = () => {
                 <div className="flex flex-col gap-5 items-center">
                   <p>Entretien MK Pro</p>
                   <p>
-                    Propose un service d'entretien ménager de qualité supérieure
+                    Propose un service d’entretien ménager de qualité supérieure
                     pour les entreprises.
                   </p>
-                  <a className="p-2 w-32 border-2" href="/services/commercial">
+                  <Link
+                    className="p-2 w-32 border-2"
+                    href="/services/commercial"
+                  >
                     Savoir plus
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -43,12 +44,12 @@ const Home: NextPage = () => {
                 <div className="flex flex-col gap-5 items-center">
                   <p>Entretien MK Pro</p>
                   <p>Offre un service de nettoyage à la vapeur.</p>
-                  <a
+                  <Link
                     className="p-2 w-32 border-2"
                     href="/services/nettoyage-a-la-vapeur"
                   >
                     Savoir plus
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
                 <div className="flex flex-col gap-5 items-center">
                   <p>Entretien MK Pro</p>
                   <p>
-                    Offre un service d'entretien d'intérieur de véhicule et ce à
+                    Offre un service d’entretien d’intérieur de véhicule et ce à
                     même votre domicile.
                   </p>
                   <a
@@ -71,10 +72,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
-    </>
+    </div>
   );
-};
-
-export default Home;
+}

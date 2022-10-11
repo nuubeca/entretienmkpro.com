@@ -1,21 +1,21 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import commercial from "../../public/images/card-commercial.jpg";
 
-const Commercial: NextPage = () => {
+export default function Commercial() {
   return (
     <>
-      <div className="w-full min-h-screen font-bold text-stone-800 flex flex-col">
-        <Header />
+      <div className="w-full min-h-screen font-bold bg-white text-stone-800 flex flex-col">
         <div className="flex-grow">
           <div className="hero">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div className="lg:max-w-xl">
-                <Image src={commercial} className="rounded-lg shadow-2xl" />
+                <Image
+                  src={commercial}
+                  className="rounded-lg shadow-2xl"
+                  alt="commercial"
+                />
               </div>
               <div>
                 <div className="flex justify-between items-center">
@@ -68,21 +68,18 @@ const Commercial: NextPage = () => {
                   <p>Industriel/Usine</p>
                 </div>
                 <div className="pb-5">
-                  <a
+                  <Link
                     href="/contactez-nous"
                     className="my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                   >
                     Obtenez votre soumission gratuite
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
-};
-
-export default Commercial;
+}

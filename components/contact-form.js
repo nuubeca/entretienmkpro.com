@@ -57,7 +57,7 @@ export default function ContactForm() {
   return (
     <form className="flex flex-col space-y-4" onSubmit={handleOnSubmit}>
       <input
-        className="input input-bordered"
+        className="input bg-white input-bordered"
         placeholder="Nom"
         id="name"
         type="text"
@@ -65,7 +65,7 @@ export default function ContactForm() {
         required
       />
       <input
-        className="input input-bordered"
+        className="input bg-white input-bordered"
         placeholder="Courriel"
         id="email"
         type="email"
@@ -73,7 +73,7 @@ export default function ContactForm() {
         required
       />
       <PatternFormat
-        className="input input-bordered"
+        className="input bg-white input-bordered"
         type="tel"
         format="(###) ###-####"
         mask=" "
@@ -97,7 +97,7 @@ export default function ContactForm() {
         onChange={(e) => {
           setService(e.target.value);
         }}
-        className="select select-bordered"
+        className="select  bg-white select-bordered"
         id="service"
         name="service"
         required
@@ -109,7 +109,7 @@ export default function ContactForm() {
       </select>
 
       <textarea
-        className="textarea textarea-bordered"
+        className="textarea  bg-white textarea-bordered"
         placeholder="Brève description"
         id="message"
         name="message"

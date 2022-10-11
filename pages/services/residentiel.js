@@ -1,21 +1,21 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowAltCircleRight, FaQuoteLeft, FaStar } from "react-icons/fa";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import residentiel from "../../public/images/card-residentiel.jpg";
 
-const Residentiel: NextPage = () => {
+export default function Residentiel() {
   return (
     <>
       <div className="w-full min-h-screen bg-white font-bold text-stone-800 flex flex-col">
-        <Header />
         <div className="flex-grow">
           <div className="hero">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div className="lg:max-w-xl">
-                <Image src={residentiel} className="rounded-lg shadow-2xl" />
+                <Image
+                  src={residentiel}
+                  className="rounded-lg shadow-2xl"
+                  alt="residentiel"
+                />
               </div>
               <div>
                 <div className="flex justify-between items-center">
@@ -29,7 +29,7 @@ const Residentiel: NextPage = () => {
                   </div>
                 </div>
                 <p className="py-6 text-stone-800/70">
-                  Entretien MK Pro propose un service d'entretien ménager
+                  Entretien MK Pro propose un service d’entretien ménager
                   complet à domicile.
                 </p>
                 <p className="pb-2 underline">Le service de base comprend :</p>
@@ -58,7 +58,7 @@ const Residentiel: NextPage = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <FaQuoteLeft />
-                    <p>Nettoyage de l'extérieur des électroménagers</p>
+                    <p>Nettoyage de l’extérieur des électroménagers</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <FaQuoteLeft />
@@ -66,7 +66,7 @@ const Residentiel: NextPage = () => {
                   </div>
                 </div>
                 <p className="pt-2">
-                  *** Nous pouvons adapter l'offre de service selon vos besoins,
+                  *** Nous pouvons adapter l’offre de service selon vos besoins,
                   simplement nous contacter pour obtenir une soumission
                   gratuite.
                 </p>
@@ -74,13 +74,13 @@ const Residentiel: NextPage = () => {
                   Le service de grand ménage est également offert et il est
                   conseillé de le faire au moins une fois par année.
                 </p>
-                <a
+                <Link
                   href="/contactez-nous"
                   className="my-3 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-stone-800 rounded-lg hover:bg-stone-800 hover:text-white focus:ring-4 focus:ring-gray-100"
                 >
                   Obtenez votre soumission gratuite
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/services/nettoyage-a-la-vapeur"
                   className="hover:text-stone-600"
                 >
@@ -91,15 +91,12 @@ const Residentiel: NextPage = () => {
                       la vapeur.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
-};
-
-export default Residentiel;
+}

@@ -1,13 +1,10 @@
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import ContactForm from "../components/contact-form";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
-const ContactezNous = () => {
+export default function ContactezNous() {
   return (
     <>
-      <div className="w-full min-h-screen font-bold text-stone-800 flex flex-col">
-        <Header />
+      <div className="w-full min-h-screen font-bold bg-white text-stone-800 flex flex-col">
         <div className="flex-grow">
           <div className="hero">
             <div className="hero-content flex-col lg:flex-row-reverse w-full">
@@ -42,10 +39,7 @@ const ContactezNous = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
-};
-
-export default ContactezNous;
+}

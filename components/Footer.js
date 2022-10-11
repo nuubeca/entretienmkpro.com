@@ -8,9 +8,9 @@ import {
 } from "react-icons/fa";
 import logo from "../public/images/logo-footer.png";
 
-function Footer() {
+export default function Footer() {
   return (
-    <>
+    <div>
       <div className="bg-stone-900 text-white">
         <footer className="footer py-10 px-5 text-white flex-none md:flex md:justify-between container mx-auto border-t-2 border-dotted -mt-5">
           <div>
@@ -73,8 +73,6 @@ function Footer() {
       <div className="text-center bg-stone-800 py-4 text-stone-400">
         Entretien MK Pro © 2022
       </div>
-    </>
+    </div>
   );
 }
-
-export default Footer;
