@@ -8,7 +8,7 @@ export default function Header() {
     <div className="navbar bg-white text-black border-b-2 border-dotted mb-5 px-5">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabindex="0" className="btn btn-ghost lg:hidden">
+          <label tabIndex="0" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -25,13 +25,13 @@ export default function Header() {
             </svg>
           </label>
           <ul
-            tabindex="0"
+            tabIndex="0"
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52"
           >
             <li>
               <Link href={"/a-propos"}>À Propos</Link>
             </li>
-            <li tabindex="0">
+            <li tabIndex="0">
               <a className="justify-between">
                 Services
                 <svg
@@ -74,7 +74,7 @@ export default function Header() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <li tabindex="0">
+          <li tabIndex="0">
             <a>
               Services
               <svg

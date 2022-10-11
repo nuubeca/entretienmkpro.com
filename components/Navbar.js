@@ -26,75 +26,81 @@ function MobileNav({ open, setOpen }) {
         </Link>
       </div>
       <div className="flex flex-col ml-4">
-        <a
-          className="text-xl font-medium my-4"
-          href="/a-propos"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          À Propos
-        </a>
-        <a
-          className="text-xl font-normal my-4"
-          href="/contactez-nous"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          Contactez-nous
-        </a>
-        <hr />
-        Services
-        <hr />
-        <a
-          className="text-xl font-normal my-4"
-          href="/services/residentiel"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          Résidentiel
-        </a>
-        <a
-          className="text-xl font-normal my-4"
-          href="/services/commercial"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          Commercial
-        </a>
-        <a
+        <Link className="text-xl font-medium my-4" href="/a-propos">
+          <a
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            À Propos
+          </a>
+        </Link>
+        <Link className="text-xl font-normal my-4" href="/contactez-nous">
+          <a
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Contactez-nous
+          </a>
+        </Link>
+        <hr className="mt-2" />
+        <span className="py-2 font-extrabold">Services</span>
+        <hr className="mb-2" />
+        <Link className="text-xl font-normal my-4" href="/services/residentiel">
+          <a
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Résidentiel
+          </a>
+        </Link>
+        <Link className="text-xl font-normal my-4" href="/services/commercial">
+          <a
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Commercial
+          </a>
+        </Link>
+        <Link
           className="text-xl font-normal my-4"
           href="/services/nettoyage-a-la-vapeur"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
         >
-          Nettoyage à la vapeur
-        </a>
-        <a
+          <a
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Nettoyage à la vapeur
+          </a>
+        </Link>
+        <Link
           className="text-xl font-normal my-4"
           href="/services/vehicule-a-domicile"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
         >
-          Véhicule à Domicile
-        </a>
+          <a
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            Véhicule à Domicile
+          </a>
+        </Link>
       </div>
     </div>
   );
@@ -136,15 +142,15 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex">
-          <ul class="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal p-0">
             <li>
               <NavLink to="/">Accueil</NavLink>
             </li>
-            <li tabindex="0">
+            <li tabIndex="0">
               <a>
                 Services
                 <svg
-                  class="fill-current"
+                  className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -153,7 +159,7 @@ export default function Navbar() {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </a>
-              <ul class="p-2 bg-white z-50">
+              <ul className="p-2 bg-white z-50">
                 <li>
                   <NavLink to="/services/residentiel">Résidentiel</NavLink>
                 </li>
