@@ -1,22 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Entretien MK Pro
 
-## Getting Started
+Site web officiel d&apos;Entretien MK Pro - Vos spécialistes de l&apos;entretien à Sherbrooke.
 
-First, run the development server:
+Ce projet utilise [Next.js 15](https://nextjs.org/) avec App Router, [Tailwind CSS](https://tailwindcss.com/), et [DaisyUI](https://daisyui.com/).
+
+## 🚀 Migration récente
+
+Ce projet a été migré de Next.js 12 (Pages Router) vers Next.js 15 (App Router). Consultez [MIGRATION.md](./MIGRATION.md) pour plus de détails.
+
+## ⚙️ Configuration requise
+
+- Node.js 18.17 ou supérieur
+- Yarn ou npm
+- Un compte [Resend](https://resend.com) pour l&apos;envoi de courriels
+
+## 🛠️ Installation
+
+1. Cloner le projet
+2. Installer les dépendances :
 
 ```bash
-npm run dev
-# or
-yarn dev
+yarn install
+# ou
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Copier le fichier d&apos;environnement :
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+cp .env.example .env.local
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+4. Configurer les variables d&apos;environnement dans `.env.local` :
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```env
+NEXT_PUBLIC_GOOGLE_ANALYTICS=G-XXXXXXXXXX
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+RESEND_FROM=onboarding@resend.dev
+RESEND_TO=entretienmkpro@hotmail.com
+```
+
+## 🚀 Démarrage
+
+Lancer le serveur de développement :
+
+```bash
+yarn dev
+# ou
+npm run dev
+```
+
+Ouvrir [http://localhost:3000](http://localhost:3000) avec votre navigateur pour voir le résultat.
+
+## 📁 Structure du projet
+
+```
+entretienmkpro.com/
+├── app/                    # App Router (Next.js 15)
+│   ├── layout.js          # Layout racine
+│   ├── page.js            # Page d&apos;accueil
+│   ├── actions.js         # Server Actions
+│   ├── a-propos/
+│   ├── contactez-nous/
+│   └── services/
+├── components/            # Composants React
+├── public/               # Fichiers statiques
+└── styles/              # Styles globaux
+```
 
 ## Learn More
 
