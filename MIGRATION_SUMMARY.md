@@ -225,3 +225,5 @@ En cas de problème :
 
 Tous les fichiers ont été migrés, testés et documentés. Le site est prêt à être déployé avec Next.js 15 et Resend.
 
+
+
